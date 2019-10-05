@@ -71,3 +71,8 @@ Division is a Long Number:
     >>> matrix = [[2, 4], [3, 5]]
     >>> matrix_divided(matrix, 2147483648)
     [[0.0, 0.0], [0.0, 0.0]]
+
+Division is Overflow:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0], [0.0, 0.0]]
