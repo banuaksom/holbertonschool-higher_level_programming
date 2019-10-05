@@ -1,0 +1,73 @@
+Function that divides all elements of a matrix
+==============================================
+Import function:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Integers:
+    >>> matrix = [[1,2,3], [4,5,6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Mixed Integers and Floats:
+    >>> matrix = [[1.23, 4], [5, 6.24]]
+    >>> matrix_divided(matrix, 2)
+    [[0.61, 2.0], [2.5, 3.12]]
+
+Strings:
+    >>> matrix = [["String", 4], [2, "String"]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Different Size:
+    >>> matrix = [[2,3], [2,3,4]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+Divided By Zero:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+Empty Matrix:
+    >>> matrix = []
+    >>> matrix_divided(matrix, 4)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+No Arguments passed:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+No Matrix passed:
+    >>> matrix = [[2, 4], [1, 3]]
+    >>> matrix_divided(, 2)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+No Division passed:
+    >>> matrix = [[2, 4], [1, 3]]
+    >>> matrix_divided(matrix,)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+None as Matrix:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+None as Division:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+Division is a Long Number:
+    >>> matrix = [[2, 4], [3, 5]]
+    >>> matrix_divided(matrix, 2147483648)
+    [[0.0, 0.0], [0.0, 0.0]]

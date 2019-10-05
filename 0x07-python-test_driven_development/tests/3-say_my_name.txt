@@ -1,0 +1,46 @@
+Function that prints My name is <first name> <last name>
+========================================================
+Import Function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Strings:
+    >>> say_my_name("Banu", "Sapakova")
+    My name is Banu Sapakova
+
+One Argument:
+    >>> say_my_name("Banu")
+    My name is Banu 
+
+First Argument Omitted:
+    >>> say_my_name(, "Sapakova")
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+Empty Strings:
+    >>> say_my_name("", "")
+    My name is  
+
+Integer as First Name:
+    >>> say_my_name(123, "Sapakova")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Integer as Last Name:
+    >>> say_my_name("Banu", 123)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+More Than Two Arguments:
+    >>> say_my_name("Banu", "Sapakova", "Sagyndykovna")
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+None as a First Name:
+    >>> say_my_name(None, "Sapakova")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+None as Last Name:
+    >>> say_my_name("Banu", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
