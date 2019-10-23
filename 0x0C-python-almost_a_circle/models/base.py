@@ -61,7 +61,7 @@ class Base:
         """loads from file"""
         f = cls.__name__ + ".json"
         empty = []
-        if f is not None and f:
+        if path.isfile(f):
             with open(f, encoding='utf-8') as a_f:
                 new_list = cls.from_json_string(a_f.read())
             for i in new_list:
