@@ -5,6 +5,7 @@ Base module for Base class
 """
 
 import json
+from os import path
 
 
 class Base:
