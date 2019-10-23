@@ -23,7 +23,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """converts to string"""
         s = "[]"
-        if list_dictionaries is not None or list_dictionaries:
+        if list_dictionaries is not None and list_dictionaries:
             return json.dumps(list_dictionaries)
         return s
 
@@ -42,7 +42,7 @@ class Base:
     def from_json_string(json_string):
         """converts from string to list"""
         empty = []
-        if json_string is not None or json_string:
+        if json_string is not None and json_string:
             return json.loads(json_string)
         return empty
 
