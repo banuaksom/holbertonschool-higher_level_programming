@@ -5,7 +5,8 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    req = requests.get("https://api.github.com/user", auth=(argv[1], argv[2])).json()
+    req = requests.get("https://api.github.com/user",
+                       auth=(argv[1], argv[2])).json()
     if "id" not in req:
         print("None")
     else:
