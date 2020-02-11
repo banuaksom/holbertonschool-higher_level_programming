@@ -2,10 +2,10 @@
 /* reads and prints the content of a file */
 const fs = require('fs');
 
-fs.readFile(process.argv[2], (err, data) => {
+fs.readFile(process.argv[2], 'utf-8', (err, data) => {
   if (err) {
-    console.error(err);
-    return;
+    console.log(err);
+	return;
   }
-  console.log(data.toString().replace(/\r?\n|\r/g, ' '));
+  console.log(data.replace(/\r?\n|\r/g, ' '));
 });
