@@ -8,7 +8,7 @@ module.exports = class Square extends firstSquare {
       super.print();
     } else {
       for (let i = 0; i < this.width; i++) {
-        console.log('c'.repeat(this.width));
+        console.log('C'.repeat(this.width));
       }
     }
   }
